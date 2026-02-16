@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 10px solid #4a3021;
+    user-select: none; /* Empêche de sélectionner le texte des pièces */
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Couleurs du damier */
+.white-square { background-color: #eeeed2; color: black; }
+.black-square { background-color: #769656; color: black; }
+
+/* Surbrillance (pour plus tard) */
+.selected { background-color: #baca2b !important; }
+.valid-move { background-color: rgba(100, 255, 100, 0.5) !important; }
+
+.piece {
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.piece.white { color: #fff; text-shadow: 0 0 2px #000; }
+.piece.black { color: #000; }
+
+.history-panel {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    height: 480px;
+    width: 150px;
+    overflow-y: auto;
+}
+/* Indicateur de coup possible (un petit rond au milieu) */
+.hint::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(100, 255, 100, 0.6);
+    border-radius: 50%;
+}
+
+/* La pièce en cours de déplacement */
+.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+/* La case survolée par une pièce valide */
+.drag-over {
+    background-color: rgba(255, 255, 0, 0.3) !important;
+}
+.captured-area {
+    margin: 10px 0;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+#captured-w, #captured-b {
+    height: 30px;
+    font-size: 24px;
+    margin-bottom: 5px;
+}

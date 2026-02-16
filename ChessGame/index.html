@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu d'Échecs JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="game-info">
+            <h1>Échecs en Ligne</h1>
+            <div id="status">Tour : Blancs</div>
+            
+            <div class="captured-area">
+                <div id="captured-w"></div> <div id="captured-b"></div> </div>
+
+            <button onclick="game.resetGame()">Nouvelle Partie</button>
+        </div>
+
+        <div style="position: relative;">
+            <div id="chessboard"></div>
+
+            <div id="promotion-modal" class="hidden">
+                <div class="modal-content">
+                    <h3>Promotion ! Choisissez une pièce :</h3>
+                    <div class="promotion-options">
+                        <button onclick="game.promotePawn('q')">♕ Dame</button>
+                        <button onclick="game.promotePawn('r')">♖ Tour</button>
+                        <button onclick="game.promotePawn('b')">♗ Fou</button>
+                        <button onclick="game.promotePawn('n')">♘ Cavalier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="history-panel">
+            <h3>Historique</h3>
+            <ul id="move-history"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
