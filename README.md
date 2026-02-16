@@ -5,7 +5,7 @@ Ce projet est une implémentation complète d'un jeu d'échecs jouable dans le n
 Le code est structuré selon les principes de la **Programmation Orientée Objet (POO)**.
 
 
-## 📋 Fonctionnalités
+## Fonctionnalités
 
 * **Règles Complètes :** Gestion des déplacements valides pour toutes les pièces (Pion, Tour, Cavalier, Fou, Dame, Roi).
 * **Sécurité du Roi :** Détection des clouages, interdiction de mettre son propre roi en échec.
@@ -19,7 +19,7 @@ Le code est structuré selon les principes de la **Programmation Orientée Objet
     * Historique des coups (Notation algébrique).
     * Affichage des pièces capturées pour chaque joueur.
 
-## 🛠️ Technologies Utilisées
+## Technologies Utilisées
 
 * **HTML5 :** Structure sémantique du plateau et des panneaux.
 * **CSS3 :** Mise en page (Grid/Flexbox), design réactif et animations.
@@ -27,7 +27,7 @@ Le code est structuré selon les principes de la **Programmation Orientée Objet
     * Utilisation de **Classes** pour chaque type de pièce (`Pawn`, `Rook`, `King`, etc.) héritant d'une classe mère `Piece`.
     * Classe `ChessGame` pour gérer l'état global et le moteur de jeu.
 
-## 🚀 Installation et Lancement
+## Installation et Lancement
 
 Ce projet ne nécessite **aucune installation** (pas de `npm`, pas de serveur).
 
@@ -36,7 +36,7 @@ Ce projet ne nécessite **aucune installation** (pas de `npm`, pas de serveur).
     * Double-cliquez sur le fichier `index.html`.
     * Le jeu se lance directement dans votre navigateur par défaut.
 
-## 🎮 Comment Jouer
+## Comment Jouer
 
 1.  **Les Blancs commencent.**
 2.  **Déplacer une pièce :**
@@ -45,7 +45,7 @@ Ce projet ne nécessite **aucune installation** (pas de `npm`, pas de serveur).
 3.  **Capturer :** Déplacez votre pièce sur une case occupée par l'adversaire. La pièce mangée apparaît dans le panneau latéral.
 4.  **Fin de partie :** Une alerte s'affiche en cas d'Échec et Mat ou de Pat (Match nul).
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```text
 /ChessGame
