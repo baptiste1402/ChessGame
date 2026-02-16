@@ -1,4 +1,4 @@
-# ♟️ Jeu d'Échecs en Ligne (JavaScript Vanilla)
+# Jeu d'Échecs en Ligne
 
 Ce projet est une implémentation complète d'un jeu d'échecs jouable dans le navigateur. Il a été développé entièrement en **HTML, CSS et JavaScript**, sans aucune librairie externe ni serveur backend.
 
